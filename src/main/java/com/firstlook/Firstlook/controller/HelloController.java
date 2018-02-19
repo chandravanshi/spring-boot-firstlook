@@ -1,4 +1,4 @@
-package com.firstlook.Firstlook;
+package com.firstlook.Firstlook.controller;
 
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
