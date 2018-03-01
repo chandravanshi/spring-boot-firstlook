@@ -1,9 +1,6 @@
 package com.firstlook.Firstlook.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -16,6 +13,18 @@ public class User {
     private String email;
     private String nick;
     private Date dateOfBirth;
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private Location location;
+    private boolean gender;
+
+    public boolean isGender() {
+        return gender;
+    }
+
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -55,5 +64,13 @@ public class User {
 
     public Date getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location locationId) {
+        this.location = location;
     }
 }
