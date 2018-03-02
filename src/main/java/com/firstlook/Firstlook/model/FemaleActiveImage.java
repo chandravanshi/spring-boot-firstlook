@@ -3,7 +3,7 @@ package com.firstlook.Firstlook.model;
 import javax.persistence.*;
 
 @Entity
-public class FemaleActiveImage {
+public class FemaleActiveImage implements  ActiveImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
